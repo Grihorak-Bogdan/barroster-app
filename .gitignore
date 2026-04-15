@@ -1,0 +1,36 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# turbo
+.turbo/
+
+# frontend
+apps/web/dist/
+apps/web/.vite/
+
+# python
+**/__pycache__/
+**/*.py[cod]
+**/*.pyo
+**/*.pyd
+**/.pytest_cache/
+**/.mypy_cache/
+
+# django / backend
+apps/api/.venv/
+apps/api/db.sqlite3
+apps/api/media/
+apps/api/staticfiles/
+
+# env files
+.env
+.env.*
+!.env.example
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+

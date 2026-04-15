@@ -1,0 +1,17 @@
+{
+  "name": "barroster",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:web": "pnpm --filter @barroster/web dev",
+    "dev:api": "pnpm --filter @barroster/api dev",
+    "build": "turbo run build",
+    "migrate": "pnpm --filter @barroster/api migrate",
+    "makemigrations": "pnpm --filter @barroster/api makemigrations",
+    "superuser": "pnpm --filter @barroster/api createsuperuser"
+  },
+  "devDependencies": {
+    "turbo": "^2.9.6"
+  }
+}
