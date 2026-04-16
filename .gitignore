@@ -18,6 +18,7 @@ apps/web/.vite/
 **/.mypy_cache/
 
 # django / backend
+apps/api/venv/
 apps/api/.venv/
 apps/api/db.sqlite3
 apps/api/media/
