@@ -2,11 +2,9 @@
   "name": "@barroster/api",
   "private": true,
   "scripts": {
-    "dev": ".venv\\Scripts\\python.exe manage.py runserver",
-    "migrate": ".venv\\Scripts\\python.exe manage.py migrate",
-    "makemigrations": ".venv\\Scripts\\python.exe manage.py makemigrations",
-    "createsuperuser": ".venv\\Scripts\\python.exe manage.py createsuperuser",
-    
-    
+    "dev": "./venv/bin/python3 manage.py runserver",
+    "migrate": "./venv/bin/python3 manage.py migrate",
+    "makemigrations": "./venv/bin/python3 manage.py makemigrations",
+    "createsuperuser": "./venv/bin/python3 manage.py createsuperuser"
   }
 }
