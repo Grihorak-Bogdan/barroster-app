@@ -9,8 +9,9 @@ class UserAdmin(BaseUserAdmin):
     model = User
 
     ordering = ("email",)
-    list_display = ("email", "first_name", "last_name", "is_staff", "is_active")
+    list_display = ("email", "first_name", "last_name", "is_staff", "is_active", "created_at")
     search_fields = ("email", "first_name", "last_name")
+    readonly_fields = ("created_at", "last_login")
 
     fieldsets = (
         (None, {"fields": ("email", "password")}),
