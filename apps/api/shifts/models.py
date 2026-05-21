@@ -64,6 +64,8 @@ class ShiftAssignment(models.Model):
         choices=AssignmentStatus.choices,
         default=AssignmentStatus.ASSIGNED,
     )
+    start_time = models.DateTimeField(blank=True, null=True)
+    end_time = models.DateTimeField(blank=True, null=True)
     check_in_time = models.DateTimeField(blank=True, null=True)
     check_out_time = models.DateTimeField(blank=True, null=True)
 

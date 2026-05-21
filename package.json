@@ -13,7 +13,9 @@
     "build": "turbo run build",
     "migrate": "pnpm --filter @barroster/api migrate",
     "makemigrations": "pnpm --filter @barroster/api makemigrations",
-    "superuser": "pnpm --filter @barroster/api createsuperuser"
+    "superuser": "pnpm --filter @barroster/api createsuperuser",
+    "seed": "pnpm --filter @barroster/api seed",
+    "seed:clear": "pnpm --filter @barroster/api seed:clear"
   },
   "devDependencies": {
     "turbo": "^2.9.6"

@@ -5,6 +5,8 @@
     "dev": ".venv\\Scripts\\python.exe manage.py runserver",
     "migrate": ".venv\\Scripts\\python.exe manage.py migrate",
     "makemigrations": ".venv\\Scripts\\python.exe manage.py makemigrations",
-    "createsuperuser": ".venv\\Scripts\\python.exe manage.py createsuperuser"
+    "createsuperuser": ".venv\\Scripts\\python.exe manage.py createsuperuser",
+    "seed": ".venv\\Scripts\\python.exe manage.py seed_demo",
+    "seed:clear": ".venv\\Scripts\\python.exe manage.py seed_demo --clear"
   }
 }

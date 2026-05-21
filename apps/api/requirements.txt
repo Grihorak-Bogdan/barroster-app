@@ -2,4 +2,7 @@ django>=5.0,<6.0
 djangorestframework
 django-cors-headers
 python-dotenv
+djangorestframework-simplejwt
+psycopg2-binary
+gunicorn
 

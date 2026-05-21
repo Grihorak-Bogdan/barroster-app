@@ -6,5 +6,5 @@ from .models import Branch
 class BranchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Branch
-        fields = ["id", "name", "address", "created_at"]
+        fields = ["id", "name", "address", "status", "created_at"]
         read_only_fields = ["id", "created_at"]

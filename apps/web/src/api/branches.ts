@@ -1,28 +1,13 @@
-import { apiFetch } from "./client"
-import type { Branch } from "../types/branch"
+import { apiFetch } from './client'
+import type { Branch, BranchStatus } from '../types/branch'
 
+export type BranchPayload = { name: string; address: string; status?: BranchStatus }
 
-type CreateBranchPayload = {
-  name: string
-  address: string
-}
-
-export function getBranches() {
-  return apiFetch<Branch[]>("/branches/")
-}
-
-export async function createBranch(payload: CreateBranchPayload): Promise<Branch> {
-    const response = await fetch("http://127.0.0.1:8000/api/branches/", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(payload),
-  })
-
-  if (!response.ok) {
-    throw new Error("Failed to create branch")
-  }
-
-  return response.json()
-}
+export const getBranches = () => apiFetch<Branch[]>('/branches/')
+export const getBranch = (id: string) => apiFetch<Branch>(`/branches/${id}/`)
+export const createBranch = (data: BranchPayload) =>
+  apiFetch<Branch>('/branches/', { method: 'POST', body: JSON.stringify(data) })
+export const updateBranch = (id: string, data: Partial<BranchPayload>) =>
+  apiFetch<Branch>(`/branches/${id}/`, { method: 'PATCH', body: JSON.stringify(data) })
+export const deleteBranch = (id: string) =>
+  apiFetch<void>(`/branches/${id}/`, { method: 'DELETE' })

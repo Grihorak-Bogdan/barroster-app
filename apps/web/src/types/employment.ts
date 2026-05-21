@@ -14,6 +14,8 @@ export type Employment = {
   id: string
   user: string
   user_email: string
+  user_first_name: string
+  user_last_name: string
   branch: string
   branch_name: string
   position: string
